@@ -6,28 +6,24 @@ using System.Threading.Tasks;
 
 namespace Cw_01
 {
-    public class Person1
-    {
-        public string Name;
-        public void Introuce(string to)
-        {
-
-        }
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            Person person = new Person();
-            person.Name1 = "Pablo";
-            person.Surname1 = "Gawino";
-            person.Age1 = 20;
-            
+            Human person1 = new Human();
+            person1.name = "John";
+            person1.surname = "Kowalski";
+            Console.WriteLine(person1.name);
 
-            person.Introdiuce();
-
-            Console.ReadKey();
+            Human person2 = new Human();
+            person2.name = "Elizabeth";
+            person2.surname = person1.surname;
+        }
+        class Human
+        {
+            public string name, surname;
+            public int age;
+            public int height;
         }
     }
-   
 }
